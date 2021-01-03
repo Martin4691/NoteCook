@@ -64,19 +64,59 @@
 		5B38C3C6258ABE6C00CB8F37 /* NoteCook */ = {
 			isa = PBXGroup;
 			children = (
-				5B38C3C7258ABE6C00CB8F37 /* AppDelegate.swift */,
-				5B38C3C9258ABE6C00CB8F37 /* SceneDelegate.swift */,
-				5B38C3CD258ABE6C00CB8F37 /* Main.storyboard */,
-				5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */,
-				5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */,
+				5B38C3D5258ABE6E00CB8F37 /* Info.plist */,
+				5B4734EE25A26FE300EE2F97 /* Design */,
+				5B4734EB25A26F9B00EE2F97 /* Views */,
+				5B4734EC25A26FAA00EE2F97 /* Data */,
+				5B4734ED25A26FB200EE2F97 /* Logics and metods */,
+				5B4734EF25A26FEF00EE2F97 /* Common */,
+			);
+			path = NoteCook;
+			sourceTree = "<group>";
+		};
+		5B4734EB25A26F9B00EE2F97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				5BEA07A225A1D22B0000AC12 /* SelectProfile.swift */,
 				5BEA07A625A1D2610000AC12 /* EditProfile.swift */,
 				5BEA07A925A1D2740000AC12 /* ChooseImage.swift */,
-				5B38C3D0258ABE6E00CB8F37 /* Assets.xcassets */,
-				5B38C3D2258ABE6E00CB8F37 /* LaunchScreen.storyboard */,
-				5B38C3D5258ABE6E00CB8F37 /* Info.plist */,
+				5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */,
 			);
-			path = NoteCook;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B4734EC25A26FAA00EE2F97 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5B4734ED25A26FB200EE2F97 /* Logics and metods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Logics and metods";
+			sourceTree = "<group>";
+		};
+		5B4734EE25A26FE300EE2F97 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				5B38C3D2258ABE6E00CB8F37 /* LaunchScreen.storyboard */,
+				5B38C3CD258ABE6C00CB8F37 /* Main.storyboard */,
+				5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		5B4734EF25A26FEF00EE2F97 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5B38C3C7258ABE6C00CB8F37 /* AppDelegate.swift */,
+				5B38C3C9258ABE6C00CB8F37 /* SceneDelegate.swift */,
+				5B38C3D0258ABE6E00CB8F37 /* Assets.xcassets */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

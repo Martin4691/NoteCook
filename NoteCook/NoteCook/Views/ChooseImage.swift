@@ -27,6 +27,9 @@ class ChooseImage: UIViewController {
     
     
     
+    @IBAction func backButtonAct(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     
     @IBAction func image1(_ sender: Any) {

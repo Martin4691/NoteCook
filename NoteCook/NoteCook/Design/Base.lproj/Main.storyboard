@@ -244,7 +244,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Insert quantity here... (Total in kitchen)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lDw-7D-pE1">
-                                        <rect key="frame" x="0.0" y="117.33333333333331" width="608" height="58.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="117.33333333333333" width="608" height="58.333333333333329"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -272,7 +272,7 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9f-ff-s5f">
-                                        <rect key="frame" x="0.0" y="234.33333333333326" width="608" height="58.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="234.33333333333329" width="608" height="58.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcx-kq-sdb">
                                                 <rect key="frame" x="150" y="7.9999999999999964" width="308" height="50.666666666666657"/>
@@ -426,7 +426,6 @@
         <!--Choose an Image-->
         <scene sceneID="gLB-Yy-JZ6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1wm-uG-7Ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="H7K-rr-tdh" userLabel="Choose an Image" customClass="ChooseImage" customModule="NoteCook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9oI-6i-Xqn">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
@@ -519,12 +518,16 @@
                     <navigationItem key="navigationItem" title="Choose your image profile:" id="azb-4e-wwC">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.uturn.backward" catalog="system" id="CjU-xn-6ID">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonAct:" destination="H7K-rr-tdh" id="yAd-oQ-xay"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="viewLabelOut" destination="Kah-Vt-O3Q" id="t9l-CM-VTG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wm-uG-7Ts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2798" y="132"/>
         </scene>
