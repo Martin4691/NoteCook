@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNm-ed-mJO">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_8" translatesAutoresizingMaskIntoConstraints="NO" id="XiE-uy-gLz">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_7" translatesAutoresizingMaskIntoConstraints="NO" id="XiE-uy-gLz">
                                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                         <color key="backgroundColor" red="0.019905194640159607" green="0.93376266956329346" blue="0.97551041841506958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.019905194640159607" green="0.93376266956329346" blue="0.97551041841506958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,7 +45,7 @@
                                                                             <action selector="button1Act:" destination="bMy-06-Fye" eventType="touchUpInside" id="N4d-HX-ha4"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Kitchen!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reS-nS-oJh">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reS-nS-oJh">
                                                                         <rect key="frame" x="0.0" y="135" width="120" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="4wZ-q2-l5C"/>
@@ -69,7 +69,7 @@
                                                                             <action selector="button2Act:" destination="bMy-06-Fye" eventType="touchUpInside" id="T9T-EA-aLV"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Kitchen!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0i-SU-HJR">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0i-SU-HJR">
                                                                         <rect key="frame" x="0.0" y="135" width="120" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="Clm-ej-741"/>
@@ -94,9 +94,6 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="DN2-Gw-P11" firstAttribute="top" secondItem="UkU-va-v4w" secondAttribute="top" id="gah-hA-L4N"/>
-                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwm-PG-CGY">
                                                 <rect key="frame" x="0.0" y="185" width="896" height="185"/>
@@ -114,7 +111,7 @@
                                                                             <action selector="button3Act:" destination="bMy-06-Fye" eventType="touchUpInside" id="wdF-Kf-nGn"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Kitchen!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ut-CO-pkf">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ut-CO-pkf">
                                                                         <rect key="frame" x="0.0" y="135" width="120" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="gYF-I6-b4e"/>
@@ -138,7 +135,7 @@
                                                                             <action selector="button4Act:" destination="bMy-06-Fye" eventType="touchUpInside" id="aFC-gd-S2c"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="New Kitchen!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vU-TO-bvb">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Kitchen 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vU-TO-bvb">
                                                                         <rect key="frame" x="0.0" y="135" width="120" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="59Y-5v-BFk"/>
@@ -182,7 +179,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x3S-3y-108"/>
-                        <color key="backgroundColor" red="0.91388416290283203" green="0.75660556554794312" blue="0.48857694864273071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.019905194640159607" green="0.93376266956329346" blue="0.97551041841506958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vNm-ed-mJO" secondAttribute="trailing" id="9Ct-jM-geE"/>
                             <constraint firstItem="vNm-ed-mJO" firstAttribute="leading" secondItem="Knh-1w-vaO" secondAttribute="leading" id="HJE-q2-ePY"/>
@@ -416,6 +413,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageButOut" destination="jX8-Tw-vLM" id="9Z4-aM-iL6"/>
+                        <outlet property="textFieldOut" destination="Lqz-zZ-Fu7" id="Qr6-U0-6m3"/>
                         <segue destination="H7K-rr-tdh" kind="show" identifier="goToImages" id="3V6-kd-0GM"/>
                     </connections>
                 </viewController>
@@ -586,7 +584,7 @@
     <resources>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
         <image name="book" catalog="system" width="128" height="102"/>
-        <image name="fondo_8" width="626" height="626"/>
+        <image name="fondo_7" width="626" height="626"/>
         <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
         <image name="png_1" width="320" height="259"/>
         <image name="png_2" width="256" height="256"/>

@@ -22,6 +22,7 @@ class SelectProfile: UIViewController {
     @IBOutlet weak var label4Out: UILabel!
     
     
+    
     override func viewDidLoad() {
         // Configurating the items screen:
         
@@ -35,18 +36,24 @@ class SelectProfile: UIViewController {
     
     @IBAction func button1Act(_ sender: Any) {
         performSegue(withIdentifier: "goToEditProfile", sender: self)
+        if 
+        
+        
     }
     
     @IBAction func button2Act(_ sender: Any) {
         performSegue(withIdentifier: "goToEditProfile", sender: self)
+        
     }
     
     @IBAction func button3Act(_ sender: Any) {
         performSegue(withIdentifier: "goToEditProfile", sender: self)
+        
     }
     
     @IBAction func button4Act(_ sender: Any) {
         performSegue(withIdentifier: "goToEditProfile", sender: self)
+        
     }
     
     
