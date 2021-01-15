@@ -17,7 +17,8 @@ class EditProfile: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     
     let choosedImage = ChooseImage()
-    
+    let profile = ProfileModel()
+    var kitchenSelected: Int? = nil
     var pickerArray = ["Kitchen 1", "Kitchen 2", "Kitchen 3", "Kitchen 4"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -44,7 +45,7 @@ class EditProfile: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let avatarImageName = Profile.imageName {
+        if let avatarImageName = ProfileModel.imageName {
             imageButOut.setImage(UIImage(named: avatarImageName), for: .normal)
             imageButOut.setBackgroundImage(nil, for: .normal)
             
@@ -69,7 +70,24 @@ class EditProfile: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     @IBAction func saveButton(_ sender: Any) {
-       
+        if kitchenSelected == 0 {
+            profilesList.remove(at: 0)
+            profilesList.insert(ProfileNumber(name: textFieldOut.text!, image: ProfileModel.imageName!), at: 0)
+            
+        } else if kitchenSelected == 1 {
+            profilesList.remove(at: 1)
+            profilesList.insert(ProfileNumber(name: textFieldOut.text!, image: ProfileModel.imageName!), at: 1)
+            
+        } else if kitchenSelected == 2 {
+            profilesList.remove(at: 2)
+            profilesList.insert(ProfileNumber(name: textFieldOut.text!, image: ProfileModel.imageName!), at: 2)
+            
+        } else {
+            profilesList.remove(at: 3)
+            profilesList.insert(ProfileNumber(name: textFieldOut.text!, image: ProfileModel.imageName!), at: 3)
+            
+        }
+        
     }
     
     @IBAction func deleteButton(_ sender: Any) {
@@ -84,8 +102,22 @@ class EditProfile: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     
     
+    //    if kitchen1 = profile[1]
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+    if (row == 0) {
+        kitchenSelected = 1
+ 
+    } else if (row == 1) {
+        kitchenSelected = 2
     
+    } else if (row == 2) {
+        kitchenSelected = 3
     
+    }else {
+        kitchenSelected = 4
+    
+    }
+    }
     
     
     

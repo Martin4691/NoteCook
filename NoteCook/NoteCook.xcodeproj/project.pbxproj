@@ -12,7 +12,9 @@
 		5B38C3CF258ABE6C00CB8F37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B38C3CD258ABE6C00CB8F37 /* Main.storyboard */; };
 		5B38C3D1258ABE6E00CB8F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B38C3D0258ABE6E00CB8F37 /* Assets.xcassets */; };
 		5B38C3D4258ABE6E00CB8F37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B38C3D2258ABE6E00CB8F37 /* LaunchScreen.storyboard */; };
-		5B8BFCEF25B0D96400C9A7A2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BFCEE25B0D96400C9A7A2 /* Profile.swift */; };
+		5B739E1925B236CB00DDBDA8 /* BarButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B739E1825B236CA00DDBDA8 /* BarButtonExtension.swift */; };
+		5B739E1F25B24F0300DDBDA8 /* ProfileNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B739E1E25B24F0300DDBDA8 /* ProfileNumber.swift */; };
+		5B8BFCEF25B0D96400C9A7A2 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */; };
 		5BEA079E25A1CD9B0000AC12 /* StandardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */; };
 		5BEA079F25A1CD9B0000AC12 /* StandardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */; };
 		5BEA07A325A1D22B0000AC12 /* SelectProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA07A225A1D22B0000AC12 /* SelectProfile.swift */; };
@@ -28,7 +30,9 @@
 		5B38C3D0258ABE6E00CB8F37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B38C3D3258ABE6E00CB8F37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B38C3D5258ABE6E00CB8F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B8BFCEE25B0D96400C9A7A2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		5B739E1825B236CA00DDBDA8 /* BarButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButtonExtension.swift; sourceTree = "<group>"; };
+		5B739E1E25B24F0300DDBDA8 /* ProfileNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNumber.swift; sourceTree = "<group>"; };
+		5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCell.swift; sourceTree = "<group>"; };
 		5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardCell.xib; sourceTree = "<group>"; };
 		5BEA07A225A1D22B0000AC12 /* SelectProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfile.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				5BEA07A225A1D22B0000AC12 /* SelectProfile.swift */,
 				5BEA07A625A1D2610000AC12 /* EditProfile.swift */,
 				5BEA07A925A1D2740000AC12 /* ChooseImage.swift */,
+				5B739E1825B236CA00DDBDA8 /* BarButtonExtension.swift */,
 				5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */,
 			);
 			path = "Views - Screen";
@@ -90,7 +95,8 @@
 		5B4734EC25A26FAA00EE2F97 /* Models - Data */ = {
 			isa = PBXGroup;
 			children = (
-				5B8BFCEE25B0D96400C9A7A2 /* Profile.swift */,
+				5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */,
+				5B739E1E25B24F0300DDBDA8 /* ProfileNumber.swift */,
 			);
 			path = "Models - Data";
 			sourceTree = "<group>";
@@ -193,10 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B739E1F25B24F0300DDBDA8 /* ProfileNumber.swift in Sources */,
 				5B38C3C8258ABE6C00CB8F37 /* AppDelegate.swift in Sources */,
+				5B739E1925B236CB00DDBDA8 /* BarButtonExtension.swift in Sources */,
 				5B38C3CA258ABE6C00CB8F37 /* SceneDelegate.swift in Sources */,
 				5BEA07AA25A1D2740000AC12 /* ChooseImage.swift in Sources */,
-				5B8BFCEF25B0D96400C9A7A2 /* Profile.swift in Sources */,
+				5B8BFCEF25B0D96400C9A7A2 /* ProfileModel.swift in Sources */,
 				5BEA079E25A1CD9B0000AC12 /* StandardCell.swift in Sources */,
 				5BEA07A725A1D2610000AC12 /* EditProfile.swift in Sources */,
 				5BEA07A325A1D22B0000AC12 /* SelectProfile.swift in Sources */,

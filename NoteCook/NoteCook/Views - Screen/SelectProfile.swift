@@ -26,9 +26,31 @@ class SelectProfile: UIViewController {
     @IBOutlet weak var subLabel3Out: UILabel!
     @IBOutlet weak var subLabel4Out: UILabel!
     
+    @IBOutlet weak var selectMode: UIBarButtonItem!
+    @IBOutlet weak var editMode: UIBarButtonItem!
     
+    
+    var isEditMode: Bool = false
+    func editionMode() {
+     if isEditMode == false {
+        selectMode.hide()
+        editMode.show()
+        editMode.title = "Edit Mode:"
+        editMode.tintColor = .black
+     } else {
+        selectMode.show()
+        selectMode.title = "Select Mode:"
+        selectMode.tintColor = .black
+        editMode.hide()
+     }
+    }
+    
+    
+    //Appear Cicle:
     override func viewDidLoad() {
-        // Configurating the items screen:
+        //Aspect:
+        isEditMode = false
+        editionMode()
         
         subLabel1Out.layer.cornerRadius = 20
         subLabel1Out.layer.borderWidth = 2
@@ -43,17 +65,49 @@ class SelectProfile: UIViewController {
         subLabel4Out.layer.borderWidth = 2
         subLabel4Out.layer.borderColor = UIColor.black.cgColor
         
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if profilesList.count > 0 && !isEditMode {
+        subLabel1Out.text = profilesList[0].name
+            button1Out.setImage(UIImage(named: profilesList[0].image), for: .normal)
+        } else {
+            subLabel1Out.text = "Name of kitchen"
+            button1Out.setImage(UIImage(named: "sombrero"), for: .normal)
+        }
         
+        if profilesList.count > 1 && !isEditMode{
+        subLabel2Out.text = profilesList[1].name
+            button2Out.setImage(UIImage(named: profilesList[1].image), for: .normal)
+        } else {
+            subLabel2Out.text = "Name of kitchen"
+            button2Out.setImage(UIImage(named: "sombrero"), for: .normal)
+        }
+        
+        if profilesList.count > 2 && !isEditMode {
+        subLabel3Out.text = profilesList[2].name
+            button3Out.setImage(UIImage(named: profilesList[2].image), for: .normal)
+        } else {
+            subLabel3Out.text = "Name of kitchen"
+            button3Out.setImage(UIImage(named: "sombrero"), for: .normal)
+        }
+        
+        if profilesList.count > 3 && !isEditMode {
+        subLabel4Out.text = profilesList[3].name
+            button4Out.setImage(UIImage(named: profilesList[3].image), for: .normal)
+        }
+        else {
+            subLabel4Out.text = "Name of kitchen"
+            button4Out.setImage(UIImage(named: "sombrero"), for: .normal)
+        }
         
     }
     
     
-    
-    
     @IBAction func button1Act(_ sender: Any) {
         performSegue(withIdentifier: "goToEditProfile", sender: self)
-         
-        
+
         
     }
     
@@ -75,16 +129,18 @@ class SelectProfile: UIViewController {
     
     
     @IBAction func selectModeButton(_ sender: Any) {
-        
+        isEditMode = false
+         editionMode()
     }
     
     @IBAction func editModeButton(_ sender: Any) {
-        
+        isEditMode = true
+         editionMode()
     }
     
     
     
-    
+   
     
     
     

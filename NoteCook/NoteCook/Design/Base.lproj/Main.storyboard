@@ -246,10 +246,12 @@
                         <outlet property="button2Out" destination="n9y-gJ-hKz" id="MRx-Pq-5NF"/>
                         <outlet property="button3Out" destination="Zg4-4I-SPP" id="ZeD-ud-Bri"/>
                         <outlet property="button4Out" destination="Zie-6m-OPu" id="HN1-8m-xOC"/>
+                        <outlet property="editMode" destination="SNE-ya-x5m" id="Wtt-ph-TvU"/>
                         <outlet property="label1Out" destination="reS-nS-oJh" id="xkG-yQ-PC1"/>
                         <outlet property="label2Out" destination="w0i-SU-HJR" id="U43-RQ-Fiw"/>
                         <outlet property="label3Out" destination="7ut-CO-pkf" id="1Hb-Cl-55X"/>
                         <outlet property="label4Out" destination="0vU-TO-bvb" id="eTT-3Y-Dio"/>
+                        <outlet property="selectMode" destination="6CV-WN-teL" id="2og-Ah-n4P"/>
                         <outlet property="subLabel1Out" destination="zeo-Ak-TvH" id="5ww-NU-O2G"/>
                         <outlet property="subLabel2Out" destination="RSU-4G-RW3" id="6Og-x0-pHJ"/>
                         <outlet property="subLabel3Out" destination="NGT-Mh-1UK" id="Drn-cO-dak"/>
@@ -378,7 +380,7 @@
                                         </constraints>
                                     </view>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBc-SJ-WSz">
-                                        <rect key="frame" x="203" y="0.0" width="202" height="209"/>
+                                        <rect key="frame" x="202" y="0.0" width="203" height="209"/>
                                     </pickerView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-RP-Q5C">
                                         <rect key="frame" x="405.33333333333337" y="0.0" width="202.66666666666663" height="209"/>
