@@ -8,18 +8,38 @@
 import Foundation
 import UIKit
 
-class EditProfile: UIViewController {
+class EditProfile: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     
     @IBOutlet weak var textFieldOut: UITextField!
     @IBOutlet weak var imageButOut: UIButton!
+    @IBOutlet weak var pickerViewOut: UIPickerView!
+    
     
     let choosedImage = ChooseImage()
     
+    var pickerArray = ["Kitchen 1", "Kitchen 2", "Kitchen 3", "Kitchen 4"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerArray[row]
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
    
         imageButOut.layer.cornerRadius = 5
+        
+        self.pickerViewOut.dataSource = self
+        self.pickerViewOut.delegate = self
         
     }
     

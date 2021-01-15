@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,31 +25,40 @@
                                         <color key="backgroundColor" red="0.019905194640159607" green="0.93376266956329346" blue="0.97551041841506958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.019905194640159607" green="0.93376266956329346" blue="0.97551041841506958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sOW-zs-rGa">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sOW-zs-rGa">
                                         <rect key="frame" x="0.0" y="44" width="896" height="370"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UkU-va-v4w">
-                                                <rect key="frame" x="0.0" y="0.0" width="896" height="185"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkU-va-v4w">
+                                                <rect key="frame" x="0.0" y="0.0" width="896" height="180"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DN2-Gw-P11">
-                                                        <rect key="frame" x="0.0" y="0.0" width="896" height="185"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="896" height="180"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Oa0-IE-fPV">
-                                                                <rect key="frame" x="75" y="0.0" width="120" height="185"/>
+                                                                <rect key="frame" x="75" y="0.0" width="120" height="180"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTH-Jr-Dks">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="135"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="105"/>
                                                                         <state key="normal" title="Button" image="sombrero"/>
                                                                         <connections>
                                                                             <action selector="button1Act:" destination="bMy-06-Fye" eventType="touchUpInside" id="N4d-HX-ha4"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reS-nS-oJh">
-                                                                        <rect key="frame" x="0.0" y="135" width="120" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="105" width="120" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="4wZ-q2-l5C"/>
+                                                                            <constraint firstAttribute="height" constant="25" id="iUN-dJ-rX4"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Kitchen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeo-Ak-TvH">
+                                                                        <rect key="frame" x="0.0" y="130" width="120" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="126-hU-STV"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -60,21 +68,30 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EIb-mG-wTi">
-                                                                <rect key="frame" x="726" y="0.0" width="120" height="185"/>
+                                                                <rect key="frame" x="726" y="0.0" width="120" height="180"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9y-gJ-hKz">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="135"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="105"/>
                                                                         <state key="normal" title="Button" image="sombrero"/>
                                                                         <connections>
                                                                             <action selector="button2Act:" destination="bMy-06-Fye" eventType="touchUpInside" id="T9T-EA-aLV"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0i-SU-HJR">
-                                                                        <rect key="frame" x="0.0" y="135" width="120" height="50"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0i-SU-HJR">
+                                                                        <rect key="frame" x="0.0" y="105" width="120" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="Clm-ej-741"/>
+                                                                            <constraint firstAttribute="height" constant="25" id="y3P-dI-g47"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Kitchen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSU-4G-RW3">
+                                                                        <rect key="frame" x="0.0" y="130" width="120" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="WoP-9Q-8F9"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -96,27 +113,36 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qwm-PG-CGY">
-                                                <rect key="frame" x="0.0" y="185" width="896" height="185"/>
+                                                <rect key="frame" x="0.0" y="190" width="896" height="180"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18P-nU-8iA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="896" height="185"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="896" height="180"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3yZ-mh-Tj8">
-                                                                <rect key="frame" x="75" y="0.0" width="120" height="185"/>
+                                                                <rect key="frame" x="75" y="0.0" width="120" height="180"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-4I-SPP">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="135"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="105"/>
                                                                         <state key="normal" title="Button" image="sombrero"/>
                                                                         <connections>
                                                                             <action selector="button3Act:" destination="bMy-06-Fye" eventType="touchUpInside" id="wdF-Kf-nGn"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ut-CO-pkf">
-                                                                        <rect key="frame" x="0.0" y="135" width="120" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="105" width="120" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="gYF-I6-b4e"/>
+                                                                            <constraint firstAttribute="height" constant="25" id="0ki-3b-RcC"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Kitchen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGT-Mh-1UK">
+                                                                        <rect key="frame" x="0.0" y="130" width="120" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="OyA-iC-HPz"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -126,21 +152,30 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W3W-Ue-1BX">
-                                                                <rect key="frame" x="726" y="0.0" width="120" height="185"/>
+                                                                <rect key="frame" x="726" y="0.0" width="120" height="180"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zie-6m-OPu">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="135"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="105"/>
                                                                         <state key="normal" title="Button" image="sombrero"/>
                                                                         <connections>
                                                                             <action selector="button4Act:" destination="bMy-06-Fye" eventType="touchUpInside" id="aFC-gd-S2c"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Kitchen 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vU-TO-bvb">
-                                                                        <rect key="frame" x="0.0" y="135" width="120" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="105" width="120" height="25"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="50" id="59Y-5v-BFk"/>
+                                                                            <constraint firstAttribute="height" constant="25" id="kbi-f8-LMk"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name of Kitchen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVB-te-VkP">
+                                                                        <rect key="frame" x="0.0" y="130" width="120" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="4OC-d7-EXX"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="15"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -162,6 +197,10 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="UkU-va-v4w" firstAttribute="top" secondItem="sOW-zs-rGa" secondAttribute="top" id="X8X-xx-3vi"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qwm-PG-CGY" secondAttribute="bottom" id="a7B-Pe-wLT"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.019905194640159607" green="0.93376266956329346" blue="0.97551041841506958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -211,6 +250,10 @@
                         <outlet property="label2Out" destination="w0i-SU-HJR" id="U43-RQ-Fiw"/>
                         <outlet property="label3Out" destination="7ut-CO-pkf" id="1Hb-Cl-55X"/>
                         <outlet property="label4Out" destination="0vU-TO-bvb" id="eTT-3Y-Dio"/>
+                        <outlet property="subLabel1Out" destination="zeo-Ak-TvH" id="5ww-NU-O2G"/>
+                        <outlet property="subLabel2Out" destination="RSU-4G-RW3" id="6Og-x0-pHJ"/>
+                        <outlet property="subLabel3Out" destination="NGT-Mh-1UK" id="Drn-cO-dak"/>
+                        <outlet property="subLabel4Out" destination="eVB-te-VkP" id="PWu-sG-PPi"/>
                         <segue destination="WwA-Zc-Ze3" kind="show" identifier="goToEditProfile" id="dmM-CG-BWu"/>
                     </connections>
                 </viewController>
@@ -313,13 +356,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qKM-A6-tfc">
-                                <rect key="frame" x="194" y="114" width="508" height="209"/>
+                                <rect key="frame" x="144" y="114" width="608" height="209"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2o2-YD-Xef">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="209"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="202.66666666666666" height="209"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jX8-Tw-vLM">
-                                                <rect key="frame" x="0.0" y="0.0" width="254" height="209"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="202.66666666666666" height="209"/>
                                                 <state key="normal" image="sombrero pirata"/>
                                                 <connections>
                                                     <action selector="imageButtonAct:" destination="WwA-Zc-Ze3" eventType="touchUpInside" id="Pff-46-64L"/>
@@ -334,11 +377,14 @@
                                             <constraint firstAttribute="bottom" secondItem="jX8-Tw-vLM" secondAttribute="bottom" id="j8C-0p-eg6"/>
                                         </constraints>
                                     </view>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBc-SJ-WSz">
+                                        <rect key="frame" x="203" y="0.0" width="202" height="209"/>
+                                    </pickerView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-RP-Q5C">
-                                        <rect key="frame" x="254" y="0.0" width="254" height="209"/>
+                                        <rect key="frame" x="405.33333333333337" y="0.0" width="202.66666666666663" height="209"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Kitchen Name..." borderStyle="bezel" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Lqz-zZ-Fu7">
-                                                <rect key="frame" x="0.0" y="0.0" width="254" height="63"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="202.66666666666666" height="63"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -346,10 +392,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dau-n8-0bV">
-                                                <rect key="frame" x="0.0" y="73" width="254" height="63"/>
+                                                <rect key="frame" x="0.0" y="73" width="202.66666666666666" height="63"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIR-qO-iGT">
-                                                        <rect key="frame" x="25" y="0.0" width="204" height="63"/>
+                                                        <rect key="frame" x="25" y="0.0" width="152.66666666666666" height="63"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="27"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="     Save" image="hand.thumbsup" catalog="system">
@@ -368,10 +414,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ol-oY-sbO">
-                                                <rect key="frame" x="0.0" y="146" width="254" height="63"/>
+                                                <rect key="frame" x="0.0" y="146" width="202.66666666666666" height="63"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRZ-Bd-vwC">
-                                                        <rect key="frame" x="25" y="0.0" width="204" height="63"/>
+                                                        <rect key="frame" x="25" y="0.0" width="152.66666666666666" height="63"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="    Delete Kitchen" image="trash" catalog="system">
@@ -398,9 +444,9 @@
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="qKM-A6-tfc" firstAttribute="top" secondItem="wnZ-BB-Nxd" secondAttribute="top" constant="70" id="2oD-vC-6ym"/>
-                            <constraint firstItem="wnZ-BB-Nxd" firstAttribute="trailing" secondItem="qKM-A6-tfc" secondAttribute="trailing" constant="150" id="5HA-fo-b7r"/>
-                            <constraint firstItem="qKM-A6-tfc" firstAttribute="leading" secondItem="wnZ-BB-Nxd" secondAttribute="leading" constant="150" id="XEH-h2-lED"/>
+                            <constraint firstItem="qKM-A6-tfc" firstAttribute="leading" secondItem="wnZ-BB-Nxd" secondAttribute="leading" constant="100" id="463-DE-VhG"/>
                             <constraint firstItem="wnZ-BB-Nxd" firstAttribute="bottom" secondItem="qKM-A6-tfc" secondAttribute="bottom" constant="70" id="erN-oi-avf"/>
+                            <constraint firstItem="wnZ-BB-Nxd" firstAttribute="trailing" secondItem="qKM-A6-tfc" secondAttribute="trailing" constant="100" id="hlU-tS-ury"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile:" id="zHy-yF-trU">
@@ -413,6 +459,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageButOut" destination="jX8-Tw-vLM" id="9Z4-aM-iL6"/>
+                        <outlet property="pickerViewOut" destination="GBc-SJ-WSz" id="TkI-so-8OD"/>
                         <outlet property="textFieldOut" destination="Lqz-zZ-Fu7" id="Qr6-U0-6m3"/>
                         <segue destination="H7K-rr-tdh" kind="show" identifier="goToImages" id="3V6-kd-0GM"/>
                     </connections>

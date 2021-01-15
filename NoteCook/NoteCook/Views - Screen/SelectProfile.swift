@@ -21,11 +21,27 @@ class SelectProfile: UIViewController {
     @IBOutlet weak var button4Out: UIButton!
     @IBOutlet weak var label4Out: UILabel!
     
+    @IBOutlet weak var subLabel1Out: UILabel!
+    @IBOutlet weak var subLabel2Out: UILabel!
+    @IBOutlet weak var subLabel3Out: UILabel!
+    @IBOutlet weak var subLabel4Out: UILabel!
     
     
     override func viewDidLoad() {
         // Configurating the items screen:
         
+        subLabel1Out.layer.cornerRadius = 20
+        subLabel1Out.layer.borderWidth = 2
+        subLabel1Out.layer.borderColor = UIColor.black.cgColor
+        subLabel2Out.layer.cornerRadius = 20
+        subLabel2Out.layer.borderWidth = 2
+        subLabel2Out.layer.borderColor = UIColor.black.cgColor
+        subLabel3Out.layer.cornerRadius = 20
+        subLabel3Out.layer.borderWidth = 2
+        subLabel3Out.layer.borderColor = UIColor.black.cgColor
+        subLabel4Out.layer.cornerRadius = 20
+        subLabel4Out.layer.borderWidth = 2
+        subLabel4Out.layer.borderColor = UIColor.black.cgColor
         
         
         
@@ -36,7 +52,7 @@ class SelectProfile: UIViewController {
     
     @IBAction func button1Act(_ sender: Any) {
         performSegue(withIdentifier: "goToEditProfile", sender: self)
-        if 
+         
         
         
     }
