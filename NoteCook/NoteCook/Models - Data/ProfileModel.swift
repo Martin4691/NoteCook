@@ -9,13 +9,17 @@ import Foundation
 import UIKit
 
 struct ProfileModel: Equatable, Codable {
-    static var name: String?
-    static var imageName: String?
-    static var image: UIImage? {
+    var name: String?
+    var id: Int?
+    var imageName: String?
+    var image: UIImage? {
         return UIImage(named: imageName ?? "LogoPNGTenoch")
     }
     
-    
+    //Codigo de Cesc
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.name == rhs.name && lhs.imageName == rhs.imageName
+    }
     
 }
 
