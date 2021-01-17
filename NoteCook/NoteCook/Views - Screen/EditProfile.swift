@@ -55,12 +55,13 @@ class EditProfile: UIViewController {
 
         guard let name = textFieldOut.text
         else { return }
-        let profile: ProfileModel = ProfileModel(name: name, id: 0, imageName: ProfileEditionModel.image ?? "LogoPNGTenoch")
+        let profile: ProfileModel = ProfileModel(name: name, imageName: ProfileEditionModel.image ?? "LogoPNGTenoch")
         
         if let selectedProfile = ProfileKitchenModel.selectedProfile {
             profileManager.removeProfile(selectedProfile)
         }
         profileManager.saveProfile(profile)
+        
         
         navigationController?.popViewController(animated: true)
     }
@@ -72,7 +73,10 @@ class EditProfile: UIViewController {
     
     
     @IBAction func backButton(_ sender: Any) {
+        
+        
         navigationController?.popViewController(animated: true)
+        
         
     }
     
