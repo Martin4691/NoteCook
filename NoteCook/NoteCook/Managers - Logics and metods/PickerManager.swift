@@ -11,12 +11,11 @@ import UIKit
 
 struct PickerManager {
     
-    var profileManager: ProfileManager = ProfileManager()
-    var nameForPicker: [String?] {
-   
-        }
-        return nameForPicker
+    let profileManager: ProfileManager = ProfileManager()
+    func nameForPicker() {
+    for nameProfile in profileManager.readProfiles().enumerated() {
+        ArrayKitchensNames.kitchensNames.append(nameProfile.element.name)
     }
-
+    }
 
 }
