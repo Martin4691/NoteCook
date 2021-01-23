@@ -13,9 +13,13 @@ struct PickerManager {
     
     let profileManager: ProfileManager = ProfileManager()
     func nameForPicker() {
-    for nameProfile in profileManager.readProfiles().enumerated() {
+        for nameProfile in profileManager.readProfiles().enumerated() {
         ArrayKitchensNames.kitchensNames.append(nameProfile.element.name)
     }
-    }
+}
+
 
 }
+
+
+

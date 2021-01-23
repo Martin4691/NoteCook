@@ -15,7 +15,7 @@ struct ProfileManager {
         if let encodedData = UserDefaults.standard.data(forKey: ProfileKeys.profilesList.rawValue) {
             do {
                 let userList = try JSONDecoder().decode([ProfileModel].self, from: encodedData)
-                return userList
+                return userList  // SUPERCLAVE este userList
                 
             } catch {
                 print("Unable to decode [ProfileModel] (\(error)")

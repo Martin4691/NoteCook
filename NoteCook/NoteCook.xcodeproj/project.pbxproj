@@ -17,7 +17,6 @@
 		5B42A43025B38F220067F0BB /* SelectProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42A42F25B38F220067F0BB /* SelectProfile.swift */; };
 		5B42A43525B4BF230067F0BB /* ArrayKitchensNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */; };
 		5B42A43825B4C05F0067F0BB /* PickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42A43725B4C05F0067F0BB /* PickerManager.swift */; };
-		5B739E1F25B24F0300DDBDA8 /* ProfileEditionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B739E1E25B24F0300DDBDA8 /* ProfileEditionModel.swift */; };
 		5B8BFCEF25B0D96400C9A7A2 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */; };
 		5BEA079E25A1CD9B0000AC12 /* StandardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */; };
 		5BEA079F25A1CD9B0000AC12 /* StandardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */; };
@@ -38,7 +37,6 @@
 		5B42A42F25B38F220067F0BB /* SelectProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfile.swift; sourceTree = "<group>"; };
 		5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayKitchensNames.swift; sourceTree = "<group>"; };
 		5B42A43725B4C05F0067F0BB /* PickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerManager.swift; sourceTree = "<group>"; };
-		5B739E1E25B24F0300DDBDA8 /* ProfileEditionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditionModel.swift; sourceTree = "<group>"; };
 		5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCell.swift; sourceTree = "<group>"; };
 		5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardCell.xib; sourceTree = "<group>"; };
@@ -77,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				5B38C3D5258ABE6E00CB8F37 /* Info.plist */,
-				5B4734EE25A26FE300EE2F97 /* Design */,
+				5B4734EE25A26FE300EE2F97 /* Layout */,
 				5B4734EB25A26F9B00EE2F97 /* Views - Screen */,
 				5B4734EC25A26FAA00EE2F97 /* Models - Data */,
 				5B4734ED25A26FB200EE2F97 /* Managers - Logics and metods */,
@@ -100,7 +98,6 @@
 		5B4734EC25A26FAA00EE2F97 /* Models - Data */ = {
 			isa = PBXGroup;
 			children = (
-				5B739E1E25B24F0300DDBDA8 /* ProfileEditionModel.swift */,
 				5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */,
 				5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */,
 				5B42A40525B32CF60067F0BB /* ProfileKitchenModel.swift */,
@@ -117,14 +114,14 @@
 			path = "Managers - Logics and metods";
 			sourceTree = "<group>";
 		};
-		5B4734EE25A26FE300EE2F97 /* Design */ = {
+		5B4734EE25A26FE300EE2F97 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
 				5B38C3D2258ABE6E00CB8F37 /* LaunchScreen.storyboard */,
 				5B38C3CD258ABE6C00CB8F37 /* Main.storyboard */,
 				5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */,
 			);
-			path = Design;
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		5B4734EF25A26FEF00EE2F97 /* Common */ = {
@@ -209,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B42A40625B32CF60067F0BB /* ProfileKitchenModel.swift in Sources */,
-				5B739E1F25B24F0300DDBDA8 /* ProfileEditionModel.swift in Sources */,
 				5B42A40325B2E1F00067F0BB /* ProfileManager.swift in Sources */,
 				5B38C3C8258ABE6C00CB8F37 /* AppDelegate.swift in Sources */,
 				5B38C3CA258ABE6C00CB8F37 /* SceneDelegate.swift in Sources */,

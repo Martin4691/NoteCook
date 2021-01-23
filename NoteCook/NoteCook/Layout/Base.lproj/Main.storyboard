@@ -56,47 +56,51 @@
                                                         <rect key="frame" x="170" y="0.0" width="496" height="70"/>
                                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                     </pickerView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yju-7q-9TC">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yju-7q-9TC">
                                                         <rect key="frame" x="686" y="0.0" width="150" height="70"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhh-r7-Ka7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="47"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="32.666666666666664"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4i-EZ-hXm">
-                                                                        <rect key="frame" x="15" y="9.3333333333333304" width="120" height="26.666666666666668"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="32.666666666666664"/>
                                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <state key="normal" backgroundImage="arrow.clockwise" catalog="system">
-                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title=" Load Profile" image="arrow.turn.left.down" catalog="system">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="buttonRefreshAct:" destination="bMy-06-Fye" eventType="touchUpInside" id="bkX-xt-YaI"/>
+                                                                            <action selector="buttonLoadProfileAct:" destination="bMy-06-Fye" eventType="touchUpInside" id="bkX-xt-YaI"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.93344688415527344" green="0.86386460065841675" blue="0.68819242715835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="A4i-EZ-hXm" firstAttribute="leading" secondItem="qhh-r7-Ka7" secondAttribute="leading" constant="15" id="D6X-Jz-BS2"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="A4i-EZ-hXm" secondAttribute="trailing" constant="15" id="TfZ-NM-VqJ"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="A4i-EZ-hXm" secondAttribute="bottom" constant="10" id="gL5-GI-Zcn"/>
-                                                                    <constraint firstItem="A4i-EZ-hXm" firstAttribute="top" secondItem="qhh-r7-Ka7" secondAttribute="top" constant="10" id="ljS-fF-loq"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="A4i-EZ-hXm" secondAttribute="bottom" id="3Y6-M0-1Nu"/>
+                                                                    <constraint firstItem="A4i-EZ-hXm" firstAttribute="top" secondItem="qhh-r7-Ka7" secondAttribute="top" id="DLL-gE-Vdv"/>
+                                                                    <constraint firstItem="A4i-EZ-hXm" firstAttribute="leading" secondItem="qhh-r7-Ka7" secondAttribute="leading" id="Ytn-ur-vFI"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="A4i-EZ-hXm" secondAttribute="trailing" id="o8m-gf-anG"/>
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHu-p7-gWh">
-                                                                <rect key="frame" x="0.0" y="52" width="150" height="18"/>
+                                                                <rect key="frame" x="0.0" y="37.666666666666657" width="150" height="32.333333333333343"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refresh list ⇪" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D2-Fl-k9D">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="18"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6O-Cr-4Vi">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="32.333333333333336"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title=" Delete Profile" image="trash" catalog="system">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="buttonDeleteProfileAct:" destination="bMy-06-Fye" eventType="touchUpInside" id="CNS-60-BSQ"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.93344688415527344" green="0.86386460065841675" blue="0.68819242715835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="backgroundColor" red="0.91764116287231445" green="0.29161632061004639" blue="0.25867483019828796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="9D2-Fl-k9D" firstAttribute="leading" secondItem="kHu-p7-gWh" secondAttribute="leading" id="4QY-du-tu6"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="9D2-Fl-k9D" secondAttribute="trailing" id="Mm2-9v-Doy"/>
-                                                                    <constraint firstItem="9D2-Fl-k9D" firstAttribute="top" secondItem="kHu-p7-gWh" secondAttribute="top" id="kV4-kU-QIO"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="9D2-Fl-k9D" secondAttribute="bottom" id="m3Z-cO-UH0"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="A6O-Cr-4Vi" secondAttribute="bottom" id="7OK-Hi-1ya"/>
+                                                                    <constraint firstItem="A6O-Cr-4Vi" firstAttribute="leading" secondItem="kHu-p7-gWh" secondAttribute="leading" id="Vlu-st-M59"/>
+                                                                    <constraint firstItem="A6O-Cr-4Vi" firstAttribute="top" secondItem="kHu-p7-gWh" secondAttribute="top" id="dlA-hE-UWS"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="A6O-Cr-4Vi" secondAttribute="trailing" id="u0h-gQ-Sox"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -194,9 +198,9 @@
                         <outlet property="labelProfileNameOut" destination="W1w-DW-FKW" id="KPE-oI-qi7"/>
                         <outlet property="pickerView" destination="b4H-MB-6M0" id="F3Q-ZS-t1M"/>
                         <outlet property="viewChooseOut" destination="eqg-gV-eG9" id="5UB-d5-O0F"/>
+                        <outlet property="viewDeleteProfileOut" destination="kHu-p7-gWh" id="oVm-sc-cFL"/>
                         <outlet property="viewLabelProfileOut" destination="ohw-P3-t4O" id="nhh-ou-Ckk"/>
-                        <outlet property="viewLabelRefreshOut" destination="kHu-p7-gWh" id="oVm-sc-cFL"/>
-                        <outlet property="viewRefreshOut" destination="qhh-r7-Ka7" id="LMP-ey-w7L"/>
+                        <outlet property="viewLoadProfileOut" destination="qhh-r7-Ka7" id="LMP-ey-w7L"/>
                         <segue destination="WwA-Zc-Ze3" kind="show" identifier="goToEditProfile" id="dmM-CG-BWu"/>
                     </connections>
                 </viewController>
@@ -390,7 +394,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile:" id="zHy-yF-trU">
-                        <barButtonItem key="leftBarButtonItem" image="arrow.uturn.backward" catalog="system" id="xrK-KX-yVG">
+                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="xrK-KX-yVG">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backButton:" destination="WwA-Zc-Ze3" id="KUB-VW-MFS"/>
@@ -500,7 +504,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Choose your image profile:" id="azb-4e-wwC">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.uturn.backward" catalog="system" id="CjU-xn-6ID">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="CjU-xn-6ID">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backButtonAct:" destination="H7K-rr-tdh" id="yAd-oQ-xay"/>
@@ -568,9 +572,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
-        <image name="arrow.uturn.backward" catalog="system" width="128" height="112"/>
+        <image name="arrow.turn.left.down" catalog="system" width="120" height="128"/>
         <image name="book" catalog="system" width="128" height="102"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="hand.thumbsup" catalog="system" width="128" height="128"/>
         <image name="png_1" width="320" height="259"/>
         <image name="png_2" width="256" height="256"/>

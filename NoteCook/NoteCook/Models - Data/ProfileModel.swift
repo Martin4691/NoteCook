@@ -15,16 +15,5 @@ struct ProfileModel: Equatable, Codable {
         return UIImage(named: imageName ?? "LogoPNGTenoch")
     }
     
-//    //Codigo de Cesc
-//    static func == (lhs: Self, rhs: Self) -> Bool {
-//        return lhs.name == rhs.name && lhs.imageName == rhs.imageName
-//    }
-//
 }
-
-
-
-//El objetivo es que cada botón se asocie a un número en la array, asi cada perfil (id) tendra este número como su identificador.
-
-
 

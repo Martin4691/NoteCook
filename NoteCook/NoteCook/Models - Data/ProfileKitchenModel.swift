@@ -11,8 +11,6 @@ import UIKit
 
 struct ProfileKitchenModel {
     static var selectedProfile: ProfileModel?
-    static var profileImage: String? = ProfileEditionModel.image
-    static var kitchenId: Int?
     
 }
 

@@ -33,31 +33,31 @@ class ChooseImage: UIViewController {
     
     
     @IBAction func image1(_ sender: Any) {
-        ProfileEditionModel.image = "png_1"
+        ProfileKitchenModel.selectedProfile?.imageName = "png_1"
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func image2(_ sender: Any) {
-        ProfileEditionModel.image = "png_2"
+        ProfileKitchenModel.selectedProfile?.imageName = "png_2"
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func image3(_ sender: Any) {
-        ProfileEditionModel.image = "png_3"
+        ProfileKitchenModel.selectedProfile?.imageName = "png_3"
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func image4(_ sender: Any) {
-        ProfileEditionModel.image = "png_4"
+        ProfileKitchenModel.selectedProfile?.imageName = "png_4"
         
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func image5(_ sender: Any) {
-        ProfileEditionModel.image = "png_5"
+        ProfileKitchenModel.selectedProfile?.imageName = "png_5"
         
         navigationController?.popViewController(animated: true)
     }
