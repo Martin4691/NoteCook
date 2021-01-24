@@ -31,6 +31,10 @@ class SelectProfile: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     @IBOutlet weak var ButtonNewProfile: UIButton!
     
     
+    // Empty profile:
+    var emptyProfile: ProfileModel = ProfileModel(name: "You should create/select a profile!", imageName: "sombrero")
+    
+    
     // MARK: Appear Cicle:
     
     override func viewDidLoad() {
@@ -38,8 +42,8 @@ class SelectProfile: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         self.pickerView.dataSource = self
         self.pickerView.delegate = self
         
-        print("Comprobación de los perfiles de readProfile().enumerated(): \n\(profileManager.readProfiles().enumerated())")
-        print("Comprobación nombres en ArrayKitchensNames.kitchenNames: \n\(ArrayKitchensNames.kitchensNames)")
+        print("---------\n To see elements in readProfile().enumerated(): \n\(profileManager.readProfiles().enumerated())\n--------")
+        print("--------\n To see elements in ArrayKitchensNames.kitchenNames: \n\(ArrayKitchensNames.kitchensNames)\n-------")
         
         // Screen Layout:
         viewChooseOut.layer.cornerRadius = 20
@@ -66,14 +70,16 @@ class SelectProfile: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         ButtonNewProfile.layer.borderWidth = 3
         // Layout end.
         
+        // First, the profile selected is an empty profile(ready to edit):
+        ProfileKitchenModel.selectedProfile = emptyProfile
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        // The picker take a list of profile names:
         pickerManager.nameForPicker()
-     
+        self.pickerView.reloadAllComponents()
     }
     
     
@@ -83,7 +89,6 @@ class SelectProfile: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
         return profileManager.readProfiles().count
     }
     
@@ -99,103 +104,97 @@ class SelectProfile: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         if row == profileManager.readProfiles().count {
             //  Esto nos dará un profile igual en picker y aislado del array de enumerated, así podremos trabajar con sus valores de (nombre e imagen).
             if row > 0 {
-            for profileFromPicker in profileManager.readProfiles() {
-                //1º: Igualamos el perfil obtenido "profileFromPicker" a los Models para acceder a la cocina:
-                ProfileKitchenModel.selectedProfile = profileFromPicker
-              
-                //2º: Ahora le damos el valor de este perfil obtenido al labelProfile y al buttonProfile, para conseguir así la imagen del perfil seleccionado en el Picker:
-                labelProfileNameOut.text = profileFromPicker.name
-                buttonProfile.setImage(UIImage(named: profileFromPicker.imageName ?? "LogoPNGTenoch"), for: .normal)
+                for profileFromPicker in profileManager.readProfiles() {
+                    //1º: Igualamos el perfil obtenido "profileFromPicker" a los Models para acceder a la cocina:
+                    ProfileKitchenModel.selectedProfile = profileFromPicker
+                    //2º: Ahora le damos el valor de este perfil obtenido al labelProfile y al buttonProfile, para conseguir así la imagen del perfil seleccionado en el Picker:
+                    labelProfileNameOut.text = profileFromPicker.name
+                    buttonProfile.setImage(UIImage(named: profileFromPicker.imageName ?? "LogoPNGTenoch"), for: .normal)
+                }
+            } else {
+                ProfileKitchenModel.selectedProfile = emptyProfile
+                labelProfileNameOut.text = "You should create/select a profile!"
+                buttonProfile.setImage(UIImage(named: "sombrero"), for: .normal)
             }
-        } else {
-            ProfileKitchenModel.selectedProfile = nil
-            labelProfileNameOut.text = "You should create/select a profile!"
-            buttonProfile.setImage(UIImage(named: "sombrero"), for: .normal)
         }
-        }
-        reloadInputViews()
     }
     
     
     // MARK: Actions:
     @IBAction func buttonLoadProfileAct(_ sender: Any) {
-        // Actualiza los nombres del picker
+        // Upload Picker View names:
         ArrayKitchensNames.kitchensNames = []
         self.pickerView.reloadAllComponents()
         pickerManager.nameForPicker()
         self.pickerView.reloadAllComponents()
         
-        // actualiza el nombre del perfil seleccionado
+        // Upload the name of profile selected:
         if profileManager.readProfiles().count > 0 {
-           if let showProfile: ProfileModel? = profileManager.readProfiles()[pickerView.selectedRow(inComponent: 0)] {
-            // Diseño:
-            labelProfileNameOut.text = showProfile?.name
-            labelProfileNameOut.reloadInputViews()
-            buttonProfile.setImage(UIImage(named: showProfile?.imageName ?? "LogoPNGTenoch"), for: .normal)
-            // Igualaciones para usar los perfiles en otras pantallas:
-            ProfileKitchenModel.selectedProfile = showProfile
+            if let showProfile: ProfileModel? = profileManager.readProfiles()[pickerView.selectedRow(inComponent: 0)] {
+                // Layout:
+                labelProfileNameOut.text = showProfile?.name
+                labelProfileNameOut.reloadInputViews()
+                buttonProfile.setImage(UIImage(named: showProfile?.imageName ?? "LogoPNGTenoch"), for: .normal)
+                // Re-value the let showProfile to take the new value in other screen/files:
+                ProfileKitchenModel.selectedProfile = showProfile
             }
         } else {
+            ProfileKitchenModel.selectedProfile = emptyProfile
             labelProfileNameOut.text = "You should create/select a profile!"
             buttonProfile.setImage(UIImage(named: "sombrero"), for: .normal)
-            
         }
         
-        // Print de comprobación de perfiles
+        // Print of values to see fails:
         print("\(profileManager.readProfiles().enumerated())" + "\n--------")
         print(ProfileKitchenModel.selectedProfile?.name ?? "NO HAY VALOR EN KITCHENMODEL.SELECTEDPROFILE.NAME")
-
-        
     }
     
+    
     @IBAction func buttonDeleteProfileAct(_ sender: Any) {
-        // esto debería ser algo así:
-            let refreshAlert = UIAlertController(title: "Are you sure?", message: "Profile will be delete.", preferredStyle: UIAlertController.Style.alert)
-            
-            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { (action: UIAlertAction!) in
-                
-                // de aqui
-                if let profile = ProfileKitchenModel.selectedProfile {
-                    self.profileManager.removeProfile(profile)
-                }
-                
-                // hasta aqui es la parte que elimina. El resto es la estructura del alert.
-            }))
-            
-            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-            }))
-            
-            present(refreshAlert, animated: true, completion: nil)
-
+        // Alert and delete profile metod:
+        let refreshAlert = UIAlertController(title: "Are you sure?", message: "Profile will be delete.", preferredStyle: UIAlertController.Style.alert)
         
-        // Reset the showed profile preferences:
-        labelProfileNameOut.text = "You should create/select a profile!"
-        buttonProfile.setImage(UIImage(named: "sombrero"), for: .normal)
-
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { (action: UIAlertAction!) in
+            // Start delete metod:
+            if let profile = ProfileKitchenModel.selectedProfile {
+                self.profileManager.removeProfile(profile)
+            }
+            // End delete metod.
+            // Reset the showed profile preferences:
+            self.labelProfileNameOut.text = "You should create/select a profile!"
+            self.buttonProfile.setImage(UIImage(named: "sombrero"), for: .normal)
+            
+            // Upload the PickerView names:
+            ArrayKitchensNames.kitchensNames = []
+            self.pickerView.reloadAllComponents()
+            self.pickerManager.nameForPicker()
+            self.pickerView.reloadAllComponents()
+        }))
         
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+        }))
+        present(refreshAlert, animated: true, completion: nil)
     }
     
     
     @IBAction func buttonProfileAct(_ sender: Any) {
-        if ProfileKitchenModel.selectedProfile != nil {
+        if ProfileKitchenModel.selectedProfile != emptyProfile && pickerView.selectedRow(inComponent: 0) > 0 {
             ProfileKitchenModel.selectedProfile =
                 profileManager.readProfiles()[pickerView.selectedRow(inComponent: 0)]
             
             dismiss(animated: true, completion: nil)
             performSegue(withIdentifier: "goToTableList", sender: self)
         } else {
+            ProfileKitchenModel.selectedProfile = emptyProfile
             performSegue(withIdentifier: "goToEditProfile", sender: self)
         }
     }
     
     
-    
     @IBAction func buttonNewProfileAct(_ sender: Any) {
-       
         performSegue(withIdentifier: "goToEditProfile", sender: self)
     }
     
     
-    
-// End file.
+    // End file.
 }

@@ -20,8 +20,6 @@ class ChooseImage: UIViewController {
         viewLabelOut.layer.cornerRadius = 40
         viewLabelOut.layer.borderWidth = 2
         viewLabelOut.layer.borderColor = UIColor.brown.cgColor
-        
-        
     }
     
     
@@ -30,7 +28,6 @@ class ChooseImage: UIViewController {
         navigationController?.popViewController(animated: true)
         
     }
-    
     
     @IBAction func image1(_ sender: Any) {
         ProfileKitchenModel.selectedProfile?.imageName = "png_1"

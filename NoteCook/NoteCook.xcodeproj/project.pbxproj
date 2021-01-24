@@ -17,6 +17,7 @@
 		5B42A43025B38F220067F0BB /* SelectProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42A42F25B38F220067F0BB /* SelectProfile.swift */; };
 		5B42A43525B4BF230067F0BB /* ArrayKitchensNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */; };
 		5B42A43825B4C05F0067F0BB /* PickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42A43725B4C05F0067F0BB /* PickerManager.swift */; };
+		5B4E215E25BDBE31001C0C67 /* README - Reason inside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E215D25BDBE31001C0C67 /* README - Reason inside.swift */; };
 		5B8BFCEF25B0D96400C9A7A2 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */; };
 		5BEA079E25A1CD9B0000AC12 /* StandardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */; };
 		5BEA079F25A1CD9B0000AC12 /* StandardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */; };
@@ -37,6 +38,7 @@
 		5B42A42F25B38F220067F0BB /* SelectProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfile.swift; sourceTree = "<group>"; };
 		5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayKitchensNames.swift; sourceTree = "<group>"; };
 		5B42A43725B4C05F0067F0BB /* PickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerManager.swift; sourceTree = "<group>"; };
+		5B4E215D25BDBE31001C0C67 /* README - Reason inside.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "README - Reason inside.swift"; sourceTree = "<group>"; };
 		5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCell.swift; sourceTree = "<group>"; };
 		5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardCell.xib; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				5B38C3C7258ABE6C00CB8F37 /* AppDelegate.swift */,
 				5B38C3C9258ABE6C00CB8F37 /* SceneDelegate.swift */,
 				5B38C3D0258ABE6E00CB8F37 /* Assets.xcassets */,
+				5B4E215D25BDBE31001C0C67 /* README - Reason inside.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				5B42A43025B38F220067F0BB /* SelectProfile.swift in Sources */,
 				5BEA079E25A1CD9B0000AC12 /* StandardCell.swift in Sources */,
 				5BEA07A725A1D2610000AC12 /* EditProfile.swift in Sources */,
+				5B4E215E25BDBE31001C0C67 /* README - Reason inside.swift in Sources */,
 				5B42A43825B4C05F0067F0BB /* PickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
