@@ -178,11 +178,11 @@ class SelectProfile: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
     
     @IBAction func buttonProfileAct(_ sender: Any) {
-        if ProfileKitchenModel.selectedProfile != emptyProfile && pickerView.selectedRow(inComponent: 0) > 0 {
+        if ProfileKitchenModel.selectedProfile != emptyProfile && pickerView.selectedRow(inComponent: 0) >= 0 {
             ProfileKitchenModel.selectedProfile =
                 profileManager.readProfiles()[pickerView.selectedRow(inComponent: 0)]
             
-            dismiss(animated: true, completion: nil)
+            
             performSegue(withIdentifier: "goToTableList", sender: self)
         } else {
             ProfileKitchenModel.selectedProfile = emptyProfile

@@ -9,11 +9,13 @@ import Foundation
 import UIKit
 
 struct ProfileModel: Equatable, Codable {
+    
     var name: String?
     var imageName: String?
     var image: UIImage? {
         return UIImage(named: imageName ?? "LogoPNGTenoch")
     }
+
     
 }
 

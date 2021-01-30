@@ -18,7 +18,10 @@
 		5B42A43525B4BF230067F0BB /* ArrayKitchensNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */; };
 		5B42A43825B4C05F0067F0BB /* PickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42A43725B4C05F0067F0BB /* PickerManager.swift */; };
 		5B4E215E25BDBE31001C0C67 /* README - Reason inside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4E215D25BDBE31001C0C67 /* README - Reason inside.swift */; };
+		5B7B5E8A25C5DA6100B150DF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B5E8925C5DA6100B150DF /* TableViewController.swift */; };
+		5B7B5E8D25C604B200B150DF /* NewItemPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B5E8C25C604B100B150DF /* NewItemPreferences.swift */; };
 		5B8BFCEF25B0D96400C9A7A2 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */; };
+		5BD6A01125C1CCAE0008B53C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6A01025C1CCAE0008B53C /* Item.swift */; };
 		5BEA079E25A1CD9B0000AC12 /* StandardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */; };
 		5BEA079F25A1CD9B0000AC12 /* StandardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */; };
 		5BEA07A725A1D2610000AC12 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA07A625A1D2610000AC12 /* EditProfile.swift */; };
@@ -39,7 +42,10 @@
 		5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayKitchensNames.swift; sourceTree = "<group>"; };
 		5B42A43725B4C05F0067F0BB /* PickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerManager.swift; sourceTree = "<group>"; };
 		5B4E215D25BDBE31001C0C67 /* README - Reason inside.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "README - Reason inside.swift"; sourceTree = "<group>"; };
+		5B7B5E8925C5DA6100B150DF /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		5B7B5E8C25C604B100B150DF /* NewItemPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemPreferences.swift; sourceTree = "<group>"; };
 		5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		5BD6A01025C1CCAE0008B53C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCell.swift; sourceTree = "<group>"; };
 		5BEA079D25A1CD9B0000AC12 /* StandardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StandardCell.xib; sourceTree = "<group>"; };
 		5BEA07A625A1D2610000AC12 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
@@ -93,6 +99,8 @@
 				5BEA07A625A1D2610000AC12 /* EditProfile.swift */,
 				5BEA07A925A1D2740000AC12 /* ChooseImage.swift */,
 				5BEA079C25A1CD9B0000AC12 /* StandardCell.swift */,
+				5B7B5E8925C5DA6100B150DF /* TableViewController.swift */,
+				5B7B5E8C25C604B100B150DF /* NewItemPreferences.swift */,
 			);
 			path = "Views - Screen";
 			sourceTree = "<group>";
@@ -100,9 +108,10 @@
 		5B4734EC25A26FAA00EE2F97 /* Models - Data */ = {
 			isa = PBXGroup;
 			children = (
-				5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */,
 				5B8BFCEE25B0D96400C9A7A2 /* ProfileModel.swift */,
+				5B42A43425B4BF230067F0BB /* ArrayKitchensNames.swift */,
 				5B42A40525B32CF60067F0BB /* ProfileKitchenModel.swift */,
+				5BD6A01025C1CCAE0008B53C /* Item.swift */,
 			);
 			path = "Models - Data";
 			sourceTree = "<group>";
@@ -209,13 +218,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B42A40625B32CF60067F0BB /* ProfileKitchenModel.swift in Sources */,
+				5B7B5E8A25C5DA6100B150DF /* TableViewController.swift in Sources */,
 				5B42A40325B2E1F00067F0BB /* ProfileManager.swift in Sources */,
 				5B38C3C8258ABE6C00CB8F37 /* AppDelegate.swift in Sources */,
 				5B38C3CA258ABE6C00CB8F37 /* SceneDelegate.swift in Sources */,
 				5BEA07AA25A1D2740000AC12 /* ChooseImage.swift in Sources */,
 				5B42A43525B4BF230067F0BB /* ArrayKitchensNames.swift in Sources */,
 				5B8BFCEF25B0D96400C9A7A2 /* ProfileModel.swift in Sources */,
+				5BD6A01125C1CCAE0008B53C /* Item.swift in Sources */,
 				5B42A43025B38F220067F0BB /* SelectProfile.swift in Sources */,
+				5B7B5E8D25C604B200B150DF /* NewItemPreferences.swift in Sources */,
 				5BEA079E25A1CD9B0000AC12 /* StandardCell.swift in Sources */,
 				5BEA07A725A1D2610000AC12 /* EditProfile.swift in Sources */,
 				5B4E215E25BDBE31001C0C67 /* README - Reason inside.swift in Sources */,

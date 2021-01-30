@@ -11,6 +11,7 @@ import UIKit
 
 struct ProfileKitchenModel {
     static var selectedProfile: ProfileModel?
+    static var arrayProducts: [Item]?
     
 }
 
