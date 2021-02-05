@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Item {
+struct Item: Codable {
     
     let name: String
     static var kgInKitchen: Int = 0
@@ -18,34 +18,14 @@ struct Item {
     static var kgLimit: Int = 0
     // the quantity that you use to call your supplier. ( > = yellow).
     var supplier: String = "Supplier Name"
-    let type: ItemType
-    let unitForMeasurement: UnitMeasurement
+    static var type: [String] = ["Meat", "Fish", "Vegetable", "Fruit", "Dessert", "Equipment", "Other"]
+    var typeSelected: String
+    static var unitForMeasurement: [String] = ["L", "Kg", "g", "Box", "Bottle", "Pack", "Otehr"]
+    var unitSelected: String
     
-    enum ItemType: CaseIterable {
-        case meat, fish, vegetable, fruit, dessert, equipment, other
-    }
-    
-    enum UnitMeasurement: CaseIterable {
-        case L, Kg, g, Box, Bottle, Pack, Other
-    }
-    
-    init(name: String, kgInKitchen: Int, kgMinimum: Int, kgLimit: Int, supplier: String, type: ItemType, unitForMeasurement: UnitMeasurement) {
-        
-        self.name = name
-        Item.kgInKitchen = kgInKitchen
-        Item.kgMinimum = kgMinimum
-        Item.kgLimit = kgLimit
-        self.supplier = supplier
-        self.type = type
-        self.unitForMeasurement = unitForMeasurement
-        
-    }
-    
-    
-    
+
     
 }
-
 
 
 

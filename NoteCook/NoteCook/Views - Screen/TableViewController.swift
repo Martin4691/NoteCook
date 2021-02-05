@@ -37,7 +37,7 @@ class TableViewController: UITableViewController {
 ////        print(personajesFemeninos)
         
         
-        return ProfileKitchenModel.arrayProducts?.count ?? 0
+        return ProfileKitchenModel.selectedProfile?.itemList.count ?? 0
     }
 
     
@@ -98,8 +98,8 @@ class TableViewController: UITableViewController {
     @IBAction func backButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func newItem(_ sender: Any) {
+       
+    @IBAction func newItemButton(_ sender: Any) {
         performSegue(withIdentifier: "goToNewProduct", sender: self)
     }
     
