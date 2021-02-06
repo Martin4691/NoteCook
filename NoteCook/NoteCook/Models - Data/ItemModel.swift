@@ -18,8 +18,10 @@ struct Item: Equatable, Codable {
      var kgLimit: Int?
     // the quantity that you use to call your supplier. ( > = yellow).
     var supplier: String?
-    static var type: [String] = ["Meat", "Fish", "Vegetable", "Fruit", "Dessert", "Equipment", "Other"]
+    var typeSelected: String?
+    var unitSelected: String?
     
+    static var type: [String] = ["Meat", "Fish", "Vegetable", "Fruit", "Dessert", "Equipment", "Other"]
     static var unitForMeasurement: [String] = ["L", "Kg", "g", "Box", "Bottle", "Pack", "Otehr"]
     
     

@@ -10,7 +10,6 @@ import UIKit
 
 class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    
     // Outlets:
     @IBOutlet weak var NameFieldOut: UITextField!
     
@@ -27,10 +26,14 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     
     @IBOutlet weak var saveButOut: UIButton!
     
+    var profileItemList = ProfileKitchenModel.selectedProfile?.itemList
+    // Con esto en teoria puedo acceder a la lista y hacerle un append del newItem
     
-//    var newItem: Item = Item(name: "", supplier: "")
-//    let emptyItem: Item = Item(name: "Insert name here...", supplier: "Select supplier contact:")
     
+    
+    var newItem: Item = .init(name: "Insert name here", kgInKitchen: 0, kgMinimum: 0, kgLimit: 0, supplier: "Select supplier contact", typeSelected: "None", unitSelected: "None")
+    
+    var emptyItem: Item = .init(name: "Insert name here", kgInKitchen: 0, kgMinimum: 0, kgLimit: 0, supplier: "Select supplier contact", typeSelected: "None", unitSelected: "None")
     
     
     
@@ -51,9 +54,12 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-//        NameFieldOut.text = emptyItem.name
-//        labelContactOut.text = emptyItem.supplier
-    
+            
+        NameFieldOut.text = emptyItem.name
+        limitOut.text = String(describing: emptyItem.kgLimit)
+        MinimumOut.text = String(describing: emptyItem.kgMinimum)
+        labelContactOut.text = emptyItem.supplier
+        
         
     }
     
@@ -89,47 +95,39 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView == pickerMeasureUnit {
-            //            aqui se pondra lo que se guarda del Item segun su  Item.UnitMeasurement. ejem Kg.
-            if row == Item.type[row].count {
+            if row == Item.unitForMeasurement[row].count {
                 if row == 0 {
-                    "L"
+                    newItem.typeSelected = "L"
                 } else if row == 1 {
-                    "Kg"
+                    newItem.typeSelected = "Kg"
                 } else if row == 2 {
-                    "g"
+                    newItem.typeSelected = "g"
                 } else if row == 3 {
-                    "Box"
+                    newItem.typeSelected = "Box"
                 } else if row == 4 {
-                    "Bottle"
+                    newItem.typeSelected = "Bottle"
                 } else if row == 5 {
-                    "Pack"
+                    newItem.typeSelected = "Pack"
                 } else if row == 6 {
-                    "Other"
+                    newItem.typeSelected = "Other"
                 }
             }
-            
-            
-            
         } else if pickerView == pickerType  {
-            //            aqui se pondra lo que se guarda del Item segun su  Item.ItemType. ejem Fruit.
-            
-            //              asignar a una row de la array Item.type[row] un color.
-            
             if row == Item.type[row].count {
                 if row == 0 {
-                    "Meat"
+                    newItem.typeSelected = "Meat"
                 } else if row == 1 {
-                    "Fish"
+                    newItem.typeSelected = "Fish"
                 } else if row == 2 {
-                    "Vegetable"
+                    newItem.typeSelected = "Vegetable"
                 } else if row == 3 {
-                    "Fruit"
+                    newItem.typeSelected = "Fruit"
                 } else if row == 4 {
-                    "Dessert"
+                    newItem.typeSelected = "Dessert"
                 } else if row == 5 {
-                    "Equipment"
+                    newItem.typeSelected = "Equipment"
                 } else if row == 6 {
-                    "Other"
+                    newItem.typeSelected = "Other"
                 }
             }
         }
@@ -138,17 +136,22 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     
     // Actions:
     @IBAction func contactButtonAct(_ sender: Any) {
+        // temporary print
         
     }
     
     
     @IBAction func saveButAct(_ sender: Any) {
         // Save metod:
+        newItem.name = NameFieldOut.text
+        newItem.kgLimit = Int(limitOut.text ?? "0")
+        newItem.kgMinimum = Int(MinimumOut.text ?? "0")
+        profileItemList?.append(newItem)
         
         
-        
-        
-        
+        print(newItem)
+        print(ProfileKitchenModel.selectedProfile)
+        print(ProfileKitchenModel.selectedProfile?.itemList.enumerated())
         
         
         navigationController?.popViewController(animated: true)
