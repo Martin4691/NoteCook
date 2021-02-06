@@ -35,7 +35,6 @@ class StandardCell: UITableViewCell {
         
         
         colorIconOut.layer.cornerRadius = 5
-        colorIconOut.backgroundColor? = colorIcon()
         
         deleteButOut.layer.cornerRadius = 5
         
@@ -51,37 +50,7 @@ class StandardCell: UITableViewCell {
     
     
     
-    // The next func return the color for colorIconOut:
-    func colorIcon() -> UIColor {
-        
-        let green: UIColor = .green
-        let yellow: UIColor = .yellow
-        let red: UIColor = .red
-        let black: UIColor = .black
-
-        if Item.kgInKitchen > Item.kgLimit && Item.kgInKitchen > Item.kgMinimum {
-           
-            return green
-        
-        } else if Item.kgInKitchen < Item.kgLimit && Item.kgInKitchen > Item.kgMinimum {
-            
-            return yellow
-            
-        } else if Item.kgInKitchen < Item.kgLimit && Item.kgInKitchen < Item.kgMinimum {
-            
-            return red
-        
-        } else {
-            return black
         }
-        
-        
-        
-        
-    }
     
     
-    
-    
-    
-}
+

@@ -28,7 +28,10 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var saveButOut: UIButton!
     
     
-    let emptyItem: Item = Item(name: "Insert name here...", supplier: "Select supplier contact:", typeSelected: "No type selected", unitSelected: "No unit of measurement selected")
+//    var newItem: Item = Item(name: "", supplier: "")
+//    let emptyItem: Item = Item(name: "Insert name here...", supplier: "Select supplier contact:")
+    
+    
     
     
     // Appear Cicle:
@@ -44,12 +47,13 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
         pickerMeasureUnit.delegate = self
         pickerMeasureUnit.dataSource = self
         
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        NameFieldOut.text = emptyItem.name
-        labelContactOut.text = emptyItem.supplier
-        
+//        NameFieldOut.text = emptyItem.name
+//        labelContactOut.text = emptyItem.supplier
+    
         
     }
     
@@ -145,18 +149,20 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
         
         
         
+        
+        
         navigationController?.popViewController(animated: true)
         
     }
     
     @IBAction func backButAct(_ sender: Any) {
+        
+        
         navigationController?.popViewController(animated: true)
     }
     
     
     
 }
-
-
 
 

@@ -9,11 +9,6 @@ import Foundation
 import UIKit
 
 struct ProfileModel: Equatable, Codable {
-    
-    static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.name == rhs.name && lhs.imageName == rhs.imageName
-    }
-    
 
     var name: String?
     var imageName: String?
@@ -24,6 +19,9 @@ struct ProfileModel: Equatable, Codable {
     var itemList: [Item?] = []
     
     
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.name == rhs.name && lhs.imageName == rhs.imageName
+    }
     
     
 }

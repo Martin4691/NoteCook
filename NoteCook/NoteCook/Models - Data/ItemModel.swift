@@ -8,20 +8,20 @@
 import Foundation
 import UIKit
 
-struct Item: Codable {
+struct Item: Equatable, Codable {
     
-    let name: String
-    static var kgInKitchen: Int = 0
+    var name: String?
+     var kgInKitchen: Int?
     // Your stock at the moment.
-    static var kgMinimum: Int = 0
+     var kgMinimum: Int?
     // Minimum quantity to work. ( > = red).
-    static var kgLimit: Int = 0
+     var kgLimit: Int?
     // the quantity that you use to call your supplier. ( > = yellow).
-    var supplier: String = "Supplier Name"
+    var supplier: String?
     static var type: [String] = ["Meat", "Fish", "Vegetable", "Fruit", "Dessert", "Equipment", "Other"]
-    var typeSelected: String
+    
     static var unitForMeasurement: [String] = ["L", "Kg", "g", "Box", "Bottle", "Pack", "Otehr"]
-    var unitSelected: String
+    
     
 
     
