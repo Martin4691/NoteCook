@@ -80,6 +80,7 @@ class SelectProfile: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         // The picker take a list of profile names:
         pickerManager.nameForPicker()
         self.pickerView.reloadAllComponents()
+        buttonLoadProfileAct((Any).self)
     }
     
     
@@ -163,6 +164,7 @@ class SelectProfile: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
             // Reset the showed profile preferences:
             self.labelProfileNameOut.text = "You should create/select a profile!"
             self.buttonProfile.setImage(UIImage(named: "sombrero"), for: .normal)
+            ProfileKitchenModel.selectedProfile = self.emptyProfile
             
             // Upload the PickerView names:
             ArrayKitchensNames.kitchensNames = []

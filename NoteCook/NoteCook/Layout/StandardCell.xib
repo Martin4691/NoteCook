@@ -11,18 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StandardCell" rowHeight="50" id="KGk-i7-Jjw" customClass="StandardCell" customModule="NoteCook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="830" height="51"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StandardCell" rowHeight="49" id="KGk-i7-Jjw" customClass="StandardCell" customModule="NoteCook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="723" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="830" height="51"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="723" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="LtY-b8-7kt">
-                        <rect key="frame" x="0.0" y="0.0" width="830" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="720" height="50"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNH-zw-YGj">
-                                <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                <rect key="frame" x="5" y="5" width="50" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kWe-vI-czg" customClass="StandardCell" customModule="NoteCook" customModuleProvider="target">
                                         <rect key="frame" x="5" y="5" width="30" height="30"/>
@@ -41,23 +41,23 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C5-XH-ue9">
-                                <rect key="frame" x="50" y="5" width="300" height="40"/>
+                                <rect key="frame" x="60" y="5" width="230" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="5v2-9M-Nd3"/>
+                                    <constraint firstAttribute="width" constant="230" id="vVp-7d-e9e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxa-GR-M3T">
-                                <rect key="frame" x="355" y="5" width="100" height="40"/>
+                                <rect key="frame" x="295" y="5" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="3T4-I4-xQF"/>
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-zJ-Ymm">
-                                <rect key="frame" x="460" y="5" width="50" height="40"/>
+                                <rect key="frame" x="400" y="5" width="50" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="2bi-Qa-CHV"/>
                                 </constraints>
@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKq-xj-RH2">
-                                <rect key="frame" x="515" y="5" width="50" height="40"/>
+                                <rect key="frame" x="455" y="5" width="50" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="YBM-hT-1Ds"/>
                                 </constraints>
@@ -75,9 +75,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otu-ud-YDB">
-                                <rect key="frame" x="570" y="5" width="200" height="40"/>
+                                <rect key="frame" x="510" y="5" width="150" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="gnr-gO-ky2"/>
+                                    <constraint firstAttribute="width" constant="150" id="vl6-aL-xkS"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="linkColor"/>
                                 <state key="normal" title="   Contact" image="phone" catalog="system">
@@ -88,7 +88,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFl-eU-7Ta">
-                                <rect key="frame" x="775" y="5" width="50" height="40"/>
+                                <rect key="frame" x="665" y="5" width="50" height="40"/>
                                 <color key="backgroundColor" red="0.93344688415527344" green="0.86386460065841675" blue="0.68819242715835571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="6N4-2B-H9m"/>
@@ -150,7 +150,7 @@
                 <outlet property="labelNameOut" destination="1C5-XH-ue9" id="WtS-5x-h1y"/>
                 <outlet property="supplierButOut" destination="otu-ud-YDB" id="IXR-yj-ZGG"/>
             </connections>
-            <point key="canvasLocation" x="210.1449275362319" y="82.03125"/>
+            <point key="canvasLocation" x="132.60869565217394" y="81.696428571428569"/>
         </tableViewCell>
     </objects>
     <resources>

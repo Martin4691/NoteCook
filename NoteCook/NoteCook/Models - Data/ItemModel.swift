@@ -21,7 +21,7 @@ struct Item: Equatable, Codable {
     var typeSelected: String?
     var unitSelected: String?
     
-    static var type: [String] = ["Meat", "Fish", "Vegetable", "Fruit", "Dessert", "Equipment", "Other"]
+    static var type: [String] = ["Meat", "Fish", "Vegetable", "Fruit", "Dessert", "Equipment", "Drinks", "Other"]
     static var unitForMeasurement: [String] = ["L", "Kg", "g", "Box", "Bottle", "Pack", "Otehr"]
     
     

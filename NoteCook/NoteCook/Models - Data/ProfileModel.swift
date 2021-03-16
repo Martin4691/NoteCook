@@ -16,7 +16,7 @@ struct ProfileModel: Equatable, Codable {
         return UIImage(named: imageName ?? "LogoPNGTenoch")
     }
     
-    var itemList: [Item?] = []
+    var itemList: [Item] = []
     
     
     static func == (lhs: Self, rhs: Self) -> Bool {

@@ -26,6 +26,8 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     
     @IBOutlet weak var saveButOut: UIButton!
     
+    
+    let profileManager: ProfileManager = ProfileManager()
     var profileItemList = ProfileKitchenModel.selectedProfile?.itemList
     // Con esto en teoria puedo acceder a la lista y hacerle un append del newItem
     
@@ -37,7 +39,7 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     
     
     
-    // Appear Cicle:
+    // MARK: - Appear Cicle:
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerType.dataSource = self
@@ -95,7 +97,8 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView == pickerMeasureUnit {
-            if row == Item.unitForMeasurement[row].count {
+            if row == Item.unitForMeasurement[row].count
+            {
                 if row == 0 {
                     newItem.typeSelected = "L"
                 } else if row == 1 {
@@ -112,7 +115,7 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
                     newItem.typeSelected = "Other"
                 }
             }
-        } else if pickerView == pickerType  {
+        } else if pickerView == pickerType {
             if row == Item.type[row].count {
                 if row == 0 {
                     newItem.typeSelected = "Meat"
@@ -127,6 +130,8 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
                 } else if row == 5 {
                     newItem.typeSelected = "Equipment"
                 } else if row == 6 {
+                    newItem.typeSelected = "Drinks"
+                } else if row == 7 {
                     newItem.typeSelected = "Other"
                 }
             }
@@ -146,12 +151,22 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
         newItem.name = NameFieldOut.text
         newItem.kgLimit = Int(limitOut.text ?? "0")
         newItem.kgMinimum = Int(MinimumOut.text ?? "0")
-        profileItemList?.append(newItem)
         
+        ProfileKitchenModel.selectedProfile?.itemList.append(newItem)
         
-        print(newItem)
-        print(ProfileKitchenModel.selectedProfile)
-        print(ProfileKitchenModel.selectedProfile?.itemList.enumerated())
+
+        //Aquí entra el mejunge:
+        let profile: ProfileModel = ProfileKitchenModel.selectedProfile!
+        
+        if let selectedProfile = ProfileKitchenModel.selectedProfile {
+            profileManager.removeProfile(selectedProfile)
+        }
+        profileManager.saveProfile(profile)
+        //
+    
+        
+        print(ProfileKitchenModel.selectedProfile?.itemList)
+        
         
         
         navigationController?.popViewController(animated: true)
@@ -159,6 +174,8 @@ class NewItemPreferences: UIViewController, UIPickerViewDataSource, UIPickerView
     }
     
     @IBAction func backButAct(_ sender: Any) {
+        
+        
         
         
         navigationController?.popViewController(animated: true)

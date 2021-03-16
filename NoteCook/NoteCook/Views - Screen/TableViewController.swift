@@ -9,43 +9,75 @@ import Foundation
 import UIKit
 
 class TableViewController: UITableViewController {
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+               
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+        
         
     }
+    
+    
+    
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // there are as many sections as Item.type cases.
-//        return SectionType.allCases.count
+
+//        return Item.type.count
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-       // Aquí trato de acceder a los que sólo sean de un tipo
-//        if tableView.numberOfSections == 0 {
-//            return ProfileKitchenModel.arrayProducts?.filter({ $0.type })
-//        }
-////        let personajesFemeninos = elenco.filter({ $0.esChica })
-////        print(personajesFemeninos)
-        
         
         return ProfileKitchenModel.selectedProfile?.itemList.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StandardCell", for: indexPath)
 
         // Configure the cell...
 
+        if let itemCell = (cell as? StandardCell),
+           let name = ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].name
+        {
+            itemCell.labelNameOut.text = name
+            
+            // Color:
+            if (ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgInKitchen)! >= (ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgLimit)! {
+                itemCell.colorIconOut.backgroundColor = UIColor.green
+            } else if (ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgInKitchen)! <= (ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgLimit)! {
+                itemCell.colorIconOut.backgroundColor = UIColor.yellow
+            } else if (ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgLimit)! <= (ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgMinimum)! {
+                itemCell.colorIconOut.backgroundColor = UIColor.red
+            } else if ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgInKitchen == 0 {
+                itemCell.colorIconOut.backgroundColor = UIColor.black
+            }
+
+            itemCell.deleteButOut.layer.cornerRadius = 5
+            itemCell.deleteButOut.layer.borderWidth = 3
+            itemCell.deleteButOut.layer.borderColor = UIColor.brown.cgColor
+                
+//            itemCell.kgStockPicker
+            
+            itemCell.kgToRedOut.text = "\(ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgMinimum ?? 0000)"
+            
+            itemCell.kgToYellowOut.text = "\(ProfileKitchenModel.selectedProfile?.itemList[indexPath.row].kgLimit ?? 0000)"
+            
+//            itemCell.supplierButOut
+            
+            
+        } else {
+            cell.backgroundColor = .black
+          
+        }
+        
         return cell
     }
     
@@ -104,33 +136,6 @@ class TableViewController: UITableViewController {
     }
     
 }
-    // MARK: - Extra Info
-    
-    extension TableViewController {
-        enum SectionType: Int, CaseIterable {
-            case meat, fish, vegetable, fruit, dessert, equipment, other
-            
-            var name: String {
-                switch self {
-                case .meat:
-                    return "Meat"
-                case .fish:
-                    return "Fish"
-                case .vegetable:
-                    return "Vegetable"
-                case .fruit:
-                    return "Fruit"
-                case .dessert:
-                    return "Dessert"
-                case .equipment:
-                    return "Equipment"
-                case .other:
-                    return "Other"
-                }
-            }
-        }
-        
-    }
 
 
 

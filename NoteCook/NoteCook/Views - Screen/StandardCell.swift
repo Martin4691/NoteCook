@@ -4,15 +4,13 @@
 //
 //  Created by Martín on 03/01/2021.
 //
-
+import Foundation
 import UIKit
 
 class StandardCell: UITableViewCell {
-
-   
+    
+    
     // Start:
-    
-    
     @IBOutlet weak var colorIconOut: UIView!
     @IBOutlet weak var labelNameOut: UILabel!
     @IBOutlet weak var kgStockPicker: UIPickerView!
@@ -33,24 +31,21 @@ class StandardCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
-        colorIconOut.layer.cornerRadius = 5
-        
-        deleteButOut.layer.cornerRadius = 5
+//        colorIconOut.layer.cornerRadius = 5
+//        deleteButOut.layer.cornerRadius = 5
         
         
         
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
     
     
-        }
-    
-    
+}
+
+
 
